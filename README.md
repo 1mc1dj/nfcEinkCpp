@@ -1,6 +1,6 @@
 # NFC E-Paper Image Uploader
 
-This is a command-line tool for uploading images to a Santek EZ Sign 2.9" 4-color NFC E-Paper display.
+This is a command-line tool for uploading images to a Santek EZ Sign 2.9" 4-color non-battery NFC E-Paper display.
 
 ## Description
 
