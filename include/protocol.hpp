@@ -19,7 +19,11 @@ struct DeviceInfo {
     int bytes_per_row() const { return width / pixels_per_byte(); }
 
     /// Whether the framebuffer is rotated 90° CW relative to the physical display
-    bool rotated() const { return width == 296 && height == 128; }
+    bool rotated() const { 
+        // The 2.9" display (296x128) is physically mounted in a way that
+        // requires the framebuffer to be rotated 90 degrees.
+        return width == 296 && height == 128; 
+    }
 
     /// Framebuffer dimensions (after rotation if applicable)
     int fb_width() const { return rotated() ? height : width; }
