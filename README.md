@@ -4,8 +4,13 @@ This is a command-line tool for uploading images to Santek EZ Sign NFC E-Paper d
 
 ## Supported Devices
 
+### E-Paper Displays
 - [ Santek ] EZ Sign 2.9" 4-color 128x296
 - [ Santek ] EZ Sign 4.2" 4-color 400x300
+
+### NFC Reader/Writers
+- Sony RC-S380 (using libusb backend)
+- ACS ACR122U (using libnfc backend) - Note: Referred to as ACR-112U in some contexts
 
 ## Description
 
