@@ -62,6 +62,10 @@ Usage: ./send_epaper <image_path> [options]
 -   `--info`: Display device information
 -   `--help`: Show this help message
 
+
+## Inspired from
+- https://gist.github.com/niw/3885b22d502bb1e145984d41568f202d
+
 ## Example Image
 
 ![Example Image](image.jpg)
