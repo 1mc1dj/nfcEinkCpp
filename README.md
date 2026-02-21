@@ -18,29 +18,43 @@ This project is built with C++17 and uses CMake for building.
 - C++17 compiler
 - CMake (>= 3.16)
 - PkgConfig
-- libusb (>= 1.0)
+- libusb (>= 1.0) (for RC-S380 backend)
+- libnfc (for PN532/ACR122U backend)
 - lzo2
 
 On macOS, you can install the dependencies using Homebrew:
 ```sh
-brew install cmake pkg-config libusb lzo2
+brew install cmake pkg-config libusb libnfc lzo2
 ```
 
 ## Building
 
+### RC-S380 (libusb) Backend (Default)
+
 1.  Create a build directory:
     ```sh
     mkdir build
-    ```
-2.  Navigate to the build directory:
-    ```sh
     cd build
     ```
-3.  Run CMake and make:
+2.  Run CMake and make:
     ```sh
     cmake ..
     make
     ```
+
+### libnfc Backend (PN532, ACR122U, etc.)
+
+1.  Create a build directory:
+    ```sh
+    mkdir build
+    cd build
+    ```
+2.  Run CMake with `NFC_BACKEND_LIBNFC=ON`:
+    ```sh
+    cmake .. -DNFC_BACKEND_LIBNFC=ON
+    make
+    ```
+
 The executable `send_epaper` will be created in the `build` directory.
 
 ## Test Environment
